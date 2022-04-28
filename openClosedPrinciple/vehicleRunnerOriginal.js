@@ -1,5 +1,4 @@
 const runVehicle = (listOfVehicles) => {
-  console.log(listOfVehicles.length);
   listOfVehicles.map((item) => {
     switch (item.vehicleType) {
       case "Sedan": {
