@@ -1,17 +1,19 @@
 const runVehicles = (listOfVehicles) => {
   listOfVehicles.map((item) => {
-    new item().runVehicle();
+    item.runVehicle();
   });
 };
 
 class Car {
-  constructor() {
+  constructor(color) {
     this.vehicleType = "Sedan";
-    this.vehicleColor = "red";
+    this.vehicleColor = color;
   }
 
   runVehicle() {
-    console.log("=============RUNNING A SEDAN CAR=============");
+    console.log(
+      `=============RUNNING A ${this.vehicleColor} SEDAN CAR=============`
+    );
     console.log("1. Get in the driver's seat and buckle up");
     console.log("2. Insert the key into the ignition.");
     console.log(
@@ -22,12 +24,14 @@ class Car {
 }
 
 class Boat {
-  constructor() {
+  constructor(color) {
     this.vehicleType = "Boat";
-    this.vehicleColor = "blue";
+    this.vehicleColor = color;
   }
   runVehicle() {
-    console.log("============DRIVING A BOAT================");
+    console.log(
+      `============DRIVING A ${this.vehicleColor} BOAT================`
+    );
     console.log("1. Run the Blower");
     console.log("2. Start the Engine ");
     console.log("3. Remove the Lines ");
@@ -37,12 +41,14 @@ class Boat {
 }
 
 class Airplane {
-  constructor() {
+  constructor(color) {
     this.vehicleType = "Airplane";
-    this.vehicleColor = "violet";
+    this.vehicleColor = color;
   }
   runVehicle() {
-    console.log("==============FLYING AN AIRPLANE==============");
+    console.log(
+      `==============FLYING A ${this.vehicleColor} AIRPLANE==============`
+    );
     console.log("1. Perform an inspection of the aircraft before getting in");
     console.log("2. Locate the flight control (column) in the cockpit");
     console.log("3. Locate the throttle and fuel mixture controls.");
@@ -52,6 +58,6 @@ class Airplane {
   }
 }
 
-const VEHICLES = [Car, Airplane, Boat];
+const VEHICLES = [new Car("blue"), new Airplane("black"), new Boat("red")];
 
 runVehicles(VEHICLES);
