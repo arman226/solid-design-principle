@@ -22,10 +22,6 @@ class Employee {
   washTheDishes = () => {
     console.log(`I am washing the dishes`);
   };
-
-  mixTheLiquidsoap = () => {
-    console.log("Mixing the Liquid Soap for Cleaning");
-  };
 }
 
 class Dishwasher extends Employee {
@@ -60,10 +56,6 @@ class Cook extends Employee {
 
   cleanTheTable = () => {
     throw Error("This is not my responsibility");
-  };
-
-  mixTheLiquidsoap = () => {
-    throw Error("I don't use soap in Cooking");
   };
 }
 

@@ -14,12 +14,6 @@ const dishwasherFunctions = {
   },
 };
 
-const liquidSoapMixerFunctions = {
-  mixTheLiquidsoap: () => {
-    console.log("Mixing the Liquid Soap for Cleaning");
-  },
-};
-
 const cookFunctions = {
   cookTheFood: (meal) => {
     console.log(`I am cooking the ${meal}`);
@@ -38,7 +32,6 @@ const cleanerFunctions = {
 class Dishwasher extends Employee {}
 
 Object.assign(Dishwasher.prototype, dishwasherFunctions);
-Object.assign(Dishwasher.prototype, liquidSoapMixerFunctions);
 
 class Cook extends Employee {}
 
@@ -47,7 +40,3 @@ Object.assign(Cook.prototype, cookFunctions);
 class Cleaner extends Employee {}
 
 Object.assign(Cleaner.prototype, cleanerFunctions);
-Object.assign(Cleaner.prototype, liquidSoapMixerFunctions);
-
-new Cleaner().cleanTheFloor();
-new Cook().cookTheFood("meal");
